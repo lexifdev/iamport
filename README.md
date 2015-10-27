@@ -16,7 +16,7 @@
 access_token = get_access_token(API_KEY, API_SECRET)
 iamport = Iamport(access_token)
 
-# 비인증결제
+# 비인증결제 요청
 iamport.onetime(
     merchant_uid=merchant_uid,  # 고유 주문번호
     amount=29900,  # 결제금액
