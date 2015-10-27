@@ -1,5 +1,5 @@
 # iamport
-결제모듈 연동 서비스 아임포트 I'mport;(http://www.iamport.kr) 의 파이썬 파인딩.
+결제모듈 연동 서비스 아임포트 I'mport;(http://www.iamport.kr) 의 파이썬 바인딩.
 
 (originally from https://github.com/pythonkr/pyconkr-2015)
 
