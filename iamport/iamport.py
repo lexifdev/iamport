@@ -6,7 +6,7 @@ u"""
 import requests
 
 
-class IamporterError(Exception):
+class IamportError(Exception):
     def __init__(self, code=None, message=None):
         self.code = code
         self.message = message
@@ -28,12 +28,12 @@ def get_access_token(api_key, api_secret):
     result = response.json()
 
     if result[u'code'] is not 0:
-        raise IamporterError(result[u'code'], result[u'message'])
+        raise IamportError(result[u'code'], result[u'message'])
 
     return result[u'response'][u'access_token']
 
 
-class Iamporter(object):
+class Iamport(object):
     u"""
     아임포터 결제 모듈
     """
@@ -59,7 +59,7 @@ class Iamporter(object):
         result = response.json()
 
         if result[u'code'] is not 0:
-            raise IamporterError(result[u'code'], result[u'message'])
+            raise IamportError(result[u'code'], result[u'message'])
 
         return result[u'response']
 
