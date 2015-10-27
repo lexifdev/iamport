@@ -106,6 +106,9 @@ class Iamport(object):
         return self._post(url, data)
 
     def find_by_merchant_uid(self, merchant_uid):
+        u"""
+        결제 내역 확인
+        """
         url = u'https://api.iamport.kr/payments/find/{merchant_uid}'.format(merchant_uid=merchant_uid)
 
         return self._get(url)
